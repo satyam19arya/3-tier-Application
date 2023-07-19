@@ -1,14 +1,15 @@
 ## 🏠 Architecture
+![architecture](https://github.com/satyam19arya/3-tier-Application/assets/77580311/1b6db6cc-e659-4b09-b565-85574f3b477b)
 
 ## Tech stack
 
-- React 
-- Nodejs
-- MySQL
+- React (FRONTEND)
+- Nodejs (BACKEND)
+- MySQL (DATABASE)
 
 ## 🖥️ Installation of frontend
 
-**Note**: You should have nodejs installed on your system. [Node.js](https://nodejs.org/)
+**Note**: You should have nodejs installed on your system
 
 👉 let install dependency to run react application
 
@@ -24,23 +25,20 @@ vim src/pages/config.js
 ```
 
 ```javascript
-// const API_BASE_URL = "http://25.41.26.237:80"; // on live backend server which is running on port 80
-const API_BASE_URL = "http://localhost:portNumber";
+const API_BASE_URL = "https://api.yourdomain.xyz";
 export default API_BASE_URL;
 ```
 make sure you EDIT above file depends on your scenario
-
 
 ```sh
 npm run build 
 ```
 
 above command creat optimize build of the application in client folder. `build/` you will find all the files that you can serve through **Apache** or **Nginx**
-that's the whole setup of the frontend
 
 ##  🖥️ ️Installation of backend
 
-**Note**: You should have nodejs installed on your system. [Node.js](https://nodejs.org/)
+**Note**: You should have nodejs installed on your system.
 
 👉 let install dependency to run Nodejs  API
 
@@ -87,5 +85,4 @@ pm2 start index.js --name "backendAPI"
 ```
 
 above command will start node server on port 80, you can modify the port number in `index.js` file
-
-✈️ Now we are Ready to see the application
+Now we are Ready to see the application😊
