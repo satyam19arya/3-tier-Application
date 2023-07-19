@@ -1,6 +1,3 @@
-## 🏠 Architecture
-![architecture](https://github.com/satyam19arya/3-tier-Application/assets/77580311/1b6db6cc-e659-4b09-b565-85574f3b477b)
-
 ## Tech stack
 
 - React (FRONTEND)
@@ -86,3 +83,6 @@ pm2 start index.js --name "backendAPI"
 
 above command will start node server on port 80, you can modify the port number in `index.js` file
 Now we are Ready to see the application😊
+
+## 🏠 Architecture
+![architecture](https://github.com/satyam19arya/3-tier-Application/assets/77580311/1b6db6cc-e659-4b09-b565-85574f3b477b)
