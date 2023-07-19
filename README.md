@@ -1,9 +1,4 @@
-   # 🚀 2ndWeeksofCloudOps - 3 tier Application
-
-✨This repository is created to learn and deploy  3-tier application on aws cloud. this project contain three layer Presentation, Application and database
-
 ## 🏠 Architecture
-![Architecture of the application](architecture.gif)
 
 ## Tech stack
 
@@ -94,5 +89,3 @@ pm2 start index.js --name "backendAPI"
 above command will start node server on port 80, you can modify the port number in `index.js` file
 
 ✈️ Now we are Ready to see the application
-
-**Thank you so much for reading..😅**
