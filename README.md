@@ -96,6 +96,7 @@ pm2 start index.js --name "backendAPI"
 ```
 
 above command will start node server on port 80, you can modify the port number in `index.js` file
+
 Now we are Ready to see the application😊
 
 ## 🏠 Architecture
