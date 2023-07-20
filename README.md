@@ -4,6 +4,19 @@
 - Nodejs (BACKEND)
 - MySQL (DATABASE)
 
+## AWS Services used
+- 🌐 Amazon Route 53
+- 💻 Amazon EC2
+- 🔐 Security Groups
+- ⚖️ Amazon Autoscaling
+- 🪪 Amazon Certificate Manager
+- 🪣 Amazon Backup service
+- 🗄️ Amazon RDS
+- ☁️ Amazon VPC
+- 🌍 Amazon CloudFront
+- 🔐 Amazon WAF
+- 👁️ Amazon CloudWatch
+
 ## 🖥️ Installation of frontend
 
 **Note**: You should have nodejs installed on your system
@@ -11,6 +24,7 @@
 👉 let install dependency to run react application
 
 ```sh
+cd 3-tier-Application
 cd client
 npm install
 ```
@@ -25,25 +39,28 @@ vim src/pages/config.js
 const API_BASE_URL = "https://api.yourdomain.xyz";
 export default API_BASE_URL;
 ```
-make sure you EDIT above file depends on your scenario
 
 ```sh
+npm install 
 npm run build 
 ```
 
-above command creat optimize build of the application in client folder. `build/` you will find all the files that you can serve through **Apache** or **Nginx**
+ `build/` you will find all the files that you can serve through **Apache** or **Nginx**
+ To serve through apache
+```sh
+sudo cp -r build/* /var/www/html
+```
 
 ##  🖥️ ️Installation of backend
 
 **Note**: You should have nodejs installed on your system.
 
-👉 let install dependency to run Nodejs  API
-
 ```sh
+cd 3-tier-Application
 cd backend
 npm install
 ```
-Now we need to create .env file that holds all the configuration details of the backend. you should be in backend directory
+Now we need to create .env file that holds all the configuration details of the backend
 
 ```sh
 vim .env
@@ -56,27 +73,24 @@ DB_USERNAME=user_name_of_MySQL
 DB_PASSWORD=passwod_of_my_sql
 PORT=3306
 ```
-**Note** : please change above file depending on your setup. like you may use RDS(AWS) or Local mysql-server on your system. your mysql contain database with the name of `test` and it should has `books` table. You can you test.sql to create table 
-
+**Note** : please change above file depending on your setup. You may use RDS(AWS) or Local mysql-server on your system. Your mysql contain database with the name of `test` and it should has `books` table. You can you test.sql to create table
 
 ```sh
-mysql -h <<RDS_ENDPOINT OR localhost>> -u <<USER_NAME>> -p<<PASSWORD>>
+npm install 
+npm install dotenv
+```
 
-CREATE DATABASE test;
-
+```sh
+sudo apt install mysql-server -y
 mysql -h <<RDS_ENDPOINT OR localhost>> -u <<USER_NAME>> -p<<PASSWORD>> test < test.sql
 ```
 
-
-please install pm2 if you want to run on cloud. you may need sudo privilages to installed it because we are going to installed globally.
-
+Please install pm2 if you want to run on cloud. you may need sudo privilages to installed it because we are going to installed globally.
 ```sh
 npm install -g pm2
 ```
 
-now you can run this application. make sure you are in backend directory
-
-
+Now you can run this application. make sure you are in backend directory
 ```sh
 pm2 start index.js --name "backendAPI"
 ```
